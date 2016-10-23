@@ -30,7 +30,7 @@ separate-uncertainty, % Unsicherheiten seperat
 
 % Bilder einbinden
 \usepackage{graphicx}
-\graphicspath{{bilder/}} % TODO: Pfad unter dem die Bilder gesucht werden
+%\graphicspath{{bilder/}} % TODO: Pfad unter dem die Bilder gesucht werden
 
 % Gestaltung
 \usepackage{microtype}  % Mikrotypographie
@@ -50,6 +50,15 @@ separate-uncertainty, % Unsicherheiten seperat
 \setheadsepline{.5pt}
 
 \usepackage[colorlinks=true]{hyperref}  % Links und weitere PDF-Features
+
+\makeatletter 
+\renewcommand\subsection{\@startsection 
+   {subsection}{2}{0mm}%      % name, ebene, einzug 
+   {0.5\baselineskip}%            % vor-abstand 
+   {0.3\baselineskip}%            % nach-abstand 
+   {\bfseries\sffamily\large}%           % layout 
+   } 
+\makeatother 
 
 % TODO: Titel und Autor, … festlegen
 \newcommand*{\titel}{Biomolecular Motors: From Cellular Function to Nanotechnology}
@@ -74,32 +83,42 @@ Betreuer: & \betreuer\end{tabular}}
 \begin{document}
 \begin{titlepage}
 \maketitle
-\begin{abstract}
+%\begin{abstract}
 
-Proteins are the basis of every living organism. They perform all types of work inside the cells. In this experiment, the interaction of the cytoskeletal motor protein kinesin-1 with microtubule filaments is investigated. 
+%Proteins are the basis of every living organism. They perform all types of work inside the cells. In this experiment, the interaction of the cytoskeletal motor protein kinesin-1 with microtubule filaments is investigated at two different temperatures. 
 
-\end{abstract}
-\tableofcontents
+%\end{abstract}
+\begin{figure}[hb] 
+  \centering
+     \includegraphics[width=0.7\textwidth]{kinesin_graphic.png}
+  \caption{Kinesin-1 with cargo on microtubules	\cite{kinesin_graphic}}
+  %\label{fig:https://de.pinterest.com/pin/565905509397043812/}
+\end{figure}
 \end{titlepage}
 
+\tableofcontents
+\pagebreak
+
 %------------------------
-\section{Physical basics}
+\section{Basics}
+
+Proteins are the basis of every living organism. They perform all types of work inside the cells. In this experiment, the interaction of the cytoskeletal motor protein kinesin-1 with microtubule filaments is investigated at two different temperatures.
 
 \subsection{Microtubules}
 
 Microtubules are hollow polymer-cylinders. They are highly dynamic filaments, always shrinking or growing, which serve as tracks for active intercellular transport. Microtubules consists of tubulin subunits, which give the tubules a plus and minus end, which allow a directed transport. 
-In this experiment, the dynamic of the tubules is stopped by Taxol, which hinders cell division. The microtubules are labelled with rhodamine to allow red fluorescence.
+In this experiment, the dynamic of the tubules is stopped by Taxol. The microtubules are labelled with rhodamine to allow red fluorescence.
 
 \subsection{Kinesin-1}
 
-Kinesin-1 is a motor protein which transports cargo around the cell. They consist of two identical, connected subunits which both have a head, a stalk and a tail. The head serves as motor and is therefore also labelled motor domain. The tail serves as cargoholder. 
-The movement of kinesin-1 is accomplished through a short bipedal walk along microtubules: one head moves in front, the other stays connected to the microtubule. For each step, the kinesin-1 “consumes” one ATP-molecule to reach the needed energy. In this way the protein manages to accomplish a velocity of 0.8$\mu m/s$. However, with a probability of 1\% both heads disconnect, resulting in a detachment of the microtubule after an average way length of 0.8$\mu m$.
+Kinesin-1 is a motor protein which transports cargo around the cell. It consists of two identical, connected subunits which both have a head, a stalk and a tail. The head serves as motor, the tail as cargoholder. 
+The movement of kinesin-1 is accomplished through bipedal walk along microtubules: one head moves in front, the other stays connected to the microtubule. For each step, the kinesin-1 “consumes” one ATP-molecule to reach the needed energy. In this way the protein manages to accomplish a velocity of 0.8$\mu m/s$. However, with a probability of 1\% both heads disconnect, resulting in a detachment of the microtubule after an average way length of 0.8$\mu m$.
 In this experiment, the kinesin-1 proteins are labelled with GFP to provide green fluorescence.
 
 \subsection{Fluorescence microscopy}
 
-To investigate the proteins fluorescence microscopy is used: The rhodamine and the GFP are excited by light: One of their electrons enters an excited orbital. This electron has the opposite spin of the remaining electron in the ground-state orbital. The molecules begin to vibrate and lose thermic energy in the process (Franck-Condon principle). After around 10\textsuperscript{-8} seconds the excited electron jumps back to the ground state and emits a photon. Because of the lost energy, the emitted photon has a larger wavelength then the absorbed one and can be distinguished from the laser light. Through this the tubules and proteins with the excited molecules can be observed. 
-To limit the fluorescing volume, Total Internal Reflection Fluorescence Microscopy is used. The exciting laser lights are totally reflected before they enter the object. However, an evanescent wave enters the object.  Like this, only the first few microtubules and proteins are illuminated.
+To investigate the proteins fluorescence microscopy is used. The rhodamine and the GFP are excited by light: One of their electrons enters an excited orbital. This electron has the opposite spin of the remaining electron in the ground-state orbital. The molecules begin to vibrate and lose thermic energy in the process. After around 10\textsuperscript{-8} seconds the excited electron jumps back to the ground state and emits a photon. Because of the lost energy, the emitted photon has a larger wavelength then the absorbed one and can be distinguished from the laser light. Through this the tubules and proteins with the excited molecules can be observed. 
+To limit the fluorescing volume, Total Internal Reflection Fluorescence Microscopy is used. The exciting laser lights are totally reflected before they enter the object. However, an evanescent wave enters the object. Like this, only the first few microtubules and proteins are illuminated.
 
 
 \section{Experimental procedure}
@@ -114,12 +133,8 @@ To limit the fluorescing volume, Total Internal Reflection Fluorescence Microsco
 
 \begin{thebibliography}{9}
 
-\bibitem{lamport94}
-  Leslie Lamport,
-  \emph{\LaTeX: a document preparation system},
-  Addison Wesley, Massachusetts,
-  2nd edition,
-  1994.
+\bibitem{kinesin_graphic}
+  https://de.pinterest.com/pin/565905509397043812/
 
 \end{thebibliography}
 
