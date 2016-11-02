@@ -5,6 +5,6 @@
 \contentsline {section}{\numberline {2}Experimental procedure}{4}{section.2}
 \contentsline {section}{\numberline {3}Data and analysis}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}Velocity}{5}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Run-length}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Run-length}{7}{subsection.3.2}
 \contentsline {section}{\numberline {4}Conclusion}{7}{section.4}
 \contentsline {section}{\nonumberline References}{7}{section*.2}
