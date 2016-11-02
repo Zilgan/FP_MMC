@@ -31,6 +31,7 @@ separate-uncertainty, % Unsicherheiten seperat
 
 % Bilder einbinden
 \usepackage{graphicx}
+\usepackage{float}
 %\graphicspath{{bilder/}} % TODO: Pfad unter dem die Bilder gesucht werden
 
 % Gestaltung
@@ -90,7 +91,7 @@ Tutor: & \betreuer\end{tabular}}
   \centering
      \includegraphics[width=0.7\textwidth]{kinesin_graphic}
   \caption{Kinesin-1 with cargo on microtubules	\cite{kinesin_graphic}}
-  %\label{fig:https://de.pinterest.com/pin/565905509397043812/}
+  \label{fig:Kinesin}
 \end{figure}
 \end{titlepage}
 
@@ -109,7 +110,7 @@ In this experiment, the dynamic of the tubules is stopped by Taxol. The microtub
 
 \subsection{Kinesin-1}
 
-Kinesin-1 is a motor protein which transports cargo around the cell. It consists of two identical, connected subunits which both have a head, a stalk and a tail. The head serves as motor, the tail as cargoholder. \\
+Kinesin-1 is a motor protein which transports cargo around the cell. It consists of two identical, connected subunits which both have a head, a stalk and a tail, as can be seen in figure \ref{fig:Kinesin}. The head serves as motor, the tail as cargoholder. \\
 The movement of kinesin-1 is accomplished through bipedal walk along microtubules: one head moves in front, the other stays connected to the microtubule. For each step, the kinesin-1 “consumes” one ATP-molecule to reach the needed energy. In this way the protein manages to accomplish a velocity of 0.8\,$\mu m/s$. However, with a probability of 1\% both heads disconnect, resulting in a detachment of the microtubule after an average way length of 0.8\,$\mu m$.\\
 In this experiment, the kinesin-1 proteins are labeled with GFP to provide green fluorescence.
 
@@ -122,7 +123,14 @@ To limit the fluorescing volume, Total Internal Reflection Fluorescence Microsco
 
 The movement of kinesin-1 has to be researched at two different temperatures: $25^\circ\text{C}$ and $37^\circ\text{C}$.
 At first one prepares a flow-cell: two pieces of glass – one hydrophob, one hydrophil to provide a better flow of the liquids – are fused with 3 pieces of parafilm to form two channels, one as a backup. Then the channels are flushed with BRB80 – this is done after every flushing, to wash the channels, keep them wet and provide a good environment for the experiment. Then Anti-Tubulin antibodies, to bind the microtubules in the channels, and F127, to prevent the binding of the kinesin-1 with the glass, are put inside. After this the microtubules, are flushed in. After a waiting time of around 1h the kinesin-1 final solution, which includes the kinesin-1, nutrients for both the microtubules and the kinesin-1 and ATP for the movement of the kinesin-1, is flushed in.\\
-To see the behaviour the samples are researched with a TIRF-microscope with a magnification of 100x and a camera pixel-size of 16\,$\mu m\textsuperscript{2}$. At first a photo of the microtubules is taken at normal light, to determine the position of the microtubules. After this a 1000-frames video is taken under green laser light, to see the movement of the kinesin-1. The data-analysis is done using the FIESTA-program which is contributed. Here the lines of the microtubules are marked and, after the computer marked tracks of moving particles on this lines, for each temperature 200-500 recognizable tracks are marked. The program calculates the velocity and run-length of this marked tracks.
+To see the behaviour the samples are researched with a TIRF-microscope with a magnification of 100x and a camera pixel-size of 16\,$\mu m\textsuperscript{2}$. At first a photo of the microtubules is taken at normal light, to determine the position of the microtubules. After this a 1000-frames video is taken under green laser light, to see the movement of the kinesin-1. The data-analysis is done using the FIESTA-program which is contributed. Here the lines of the microtubules are marked as can be seen in figure \ref{fig:marking} and, after the computer marked tracks of moving particles on this lines, for each temperature 200-500 recognizable tracks of the kinesin-1 are marked. The program calculates the velocity and run-length of this marked tracks.
+
+\begin{figure}[!ht] 
+  \centering
+     \includegraphics[width=0.7\textwidth]{kinesin_marking}
+  \caption{Marking of microtubules in FIESTA for analysis}
+  \label{fig:marking}
+\end{figure}
 
 \section{Data and analysis}
 
@@ -131,40 +139,41 @@ The reason for this problem was probably the kinesin-1 final solution, which con
 As we had no experimental data of ourselves, the following data-analysis is performed with data of another group. The extraction of the data by using FIESTA was performed by us. \\
 We acquired the following amount of movement incidents: 
 \begin{align*}
-25^\circ C \ : \ 568 \\
+25^\circ C \ : \ 546 \\
 37^\circ C \ : \ 513
 \end{align*}
 
-\begin{figure}[p] 
+\begin{figure}[htp] 
   \centering
      \includegraphics[width=1.0\textwidth]{all_diagrams.png}
   \caption{top-left: Normalized velocity of kinesin-1 at $25^\circ$ C; top-right: Normalized velocity of kinesin-1 at $37^\circ$ C; mid-left: Normalized run-length of kinesin-1 at $25^\circ$ C; mid-right: Normalized run-length of kinesin-1 at $37^\circ$ C; bottom-left: Cumulative run-length of kinesin-1 at $25^\circ$ C; bottom-right: Cumulative run-length of kinesin-1 at $37^\circ$ C}
-  %\label{fig:https://de.pinterest.com/pin/565905509397043812/}
+  \label{fig:diagrams}
 \end{figure}
 
 \subsection{Velocity}
 
-Histograms of the velocities are shown in figure ?. They resemble normal distributions, however, the performance of the Shapir-Wilk-test gives back a value of $W = 0.8$, which isn't enough to verify this claim. To make sure that this distributions are normal distributions, a greater amount of incidents would be necessary.  The calculated mean velocities with their standard deviations are:
+Histograms of the velocities are shown in figure \ref{fig:diagrams}. They resemble normal distributions, however, the performance of a Shapir-Wilk-test gives back a value of $W = 0.8$, which isn't enough to verify this claim. To make sure that this distributions are normal distributions, a greater amount of incidents would be necessary. The calculated mean velocities with their standard deviations are:
 \begin{align*}
 v _{25^\circ C} \ = \ (1.0 \ \pm \ 0.5) \, \mu m/s \\
 v _{37^\circ C} \ = \ (1.4 \ \pm \ 0.6) \, \mu m/s
 \end{align*}
 
-A comparison of the two mean velocities leads to the claim, that the true mean velocities differ for 0.4\,m/s. The performance of a Welch-test leads to a one-sided p-value of 0.47 and a two-sided p-value of 0.93, which are both bigger than 0.01. Therefore, the claim cannot be falsified. \\
-TIRF-microscope is a very exact measurement, the gained pictures are very accurate, as can be seen in figure ?. Errors come mainly from the lack of sufficient incidents and the evaluation with FIESTA. 
+A comparison of the two mean velocities leads to the claim, that the true mean velocities differ for $0.4\, \mu m/s$. The performance of a Welch-test leads to a one-sided p-value of 0.47 and a two-sided p-value of 0.93, which are both bigger than 0.01. Therefore, the claim cannot be falsified. \\
+TIRF-microscope is a very exact measurement, the gained pictures are very accurate, as can be seen in figure \ref{fig:marking}. Errors come mainly from the lack of sufficient incidents and the evaluation with FIESTA. Because the marking of microtubules and of kinesin-1-tracks was done manually, errors are inevitable. However, most of them should cancel each other statistically. The biggest error of the analysis should therefore be the lack of marked slow proteins: As very slow moving particles weren't marked, because they could be dead proteins or errors of the picture, very slow moving kinesin-1 are ignored.
 
 \subsection{Run-length}
 
-The histograms of the run-length can also be found in figure ?. These distributions can be fitted with an exponential fit. We fitted both with using the first bins and not-using them. The reason, why it is better to not use them, is, that very slow moving proteins weren't analyzed or assumed as dead, therefore the amount of incidents for the first bins aren't reliable. 
+The histograms of the run-length can also be found in figure \ref{fig:diagrams}. These distributions can be fitted with an exponential fit. We fitted both with using the first bins and not-using them. The first bins aren't reliable, as the slowest moving kinesin-1 weren't marked, as explained above. 
 
 The calculated mean run-lengths are:
-
 \begin{align*}
 l _{25^\circ C} \ = \ (1.2 \ \pm \ 0.9) \, \mu m \\
 l _{37^\circ C} \ = \ (1.4 \ \pm \ 0.9) \, \mu m
 \end{align*}
 
-Again the claim is, that the true mean velocities differ for the same value than the measured mean velocities, in this case \(0.2\, \mu m\). The Welch-test gives a one-sided p-value of 0.44 and a two-sided p-value of 0.88 and again the claim cannot be neglected.
+Again the claim is, that the true mean velocities differ for the same value than the measured mean velocities, in this case \(0.2\, \mu m\). The Welch-test gives a one-sided p-value of 0.44 and a two-sided p-value of 0.88. Because of this, the claim also cannot be neglected. 
+
+To solidify our claim, we also plotted the accumulated run-lengths of the kinesin-1. To grant a better visibility of the result, the chosen bin size is much smaller. The plots can be seen in figure \ref{fig:diagrams}. It can also be seen, that the chosen exponential fit is very good, as it almost 
 
 \section{Conclusion}
 
