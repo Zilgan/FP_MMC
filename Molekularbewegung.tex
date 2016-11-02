@@ -152,7 +152,7 @@ We acquired the following amount of movement incidents:
 
 \subsection{Velocity}
 
-Histograms of the velocities are shown in figure \ref{fig:diagrams}. They resemble normal distributions, however, the performance of a Shapir-Wilk-test gives back a value of $W = 0.8$, which isn't enough to verify this claim. To make sure that this distributions are normal distributions, a greater amount of incidents would be necessary. The calculated mean velocities with their standard deviations are:
+Histograms of the velocities are shown in figure \ref{fig:diagrams}. They resemble normal distributions, however, the performance of a Shapir-Wilk-test gives back a value of $W = 0.8$, which isn't enough to verify this claim. To make sure that this distributions are normal distributions, a greater amount of incidents would be necessary. The calculated mean velocities with their standard deviations as errors are:
 \begin{align*}
 v _{25^\circ C} \ = \ (1.0 \ \pm \ 0.5) \, \mu m/s \\
 v _{37^\circ C} \ = \ (1.4 \ \pm \ 0.6) \, \mu m/s
@@ -163,9 +163,12 @@ TIRF-microscope is a very exact measurement, the gained pictures are very accura
 
 \subsection{Run-length}
 
-The histograms of the run-length can also be found in figure \ref{fig:diagrams}. These distributions can be fitted with an exponential fit. We fitted both with using the first bins and not-using them. The first bins aren't reliable, as the slowest moving kinesin-1 weren't marked, as explained above. 
+The histograms of the run-length can also be found in figure \ref{fig:diagrams}. These distributions can be fitted with an exponential fit. We fitted without using the first bin three bins for $25^\circ C$ and without using the first two bins for $37^\circ C$. The first bins aren't reliable, as the slowest moving kinesin-1 weren't marked, as explained above. The formula for the fit is:
+\begin{align*}
+y = a (1 - e^{-bx})^c
+\end{align*}
 
-The calculated mean run-lengths are:
+The calculated mean run-lengths with their standard deviation as errors are:
 \begin{align*}
 l _{25^\circ C} \ = \ (1.2 \ \pm \ 0.9) \, \mu m \\
 l _{37^\circ C} \ = \ (1.4 \ \pm \ 0.9) \, \mu m
@@ -173,7 +176,27 @@ l _{37^\circ C} \ = \ (1.4 \ \pm \ 0.9) \, \mu m
 
 Again the claim is, that the true mean velocities differ for the same value than the measured mean velocities, in this case \(0.2\, \mu m\). The Welch-test gives a one-sided p-value of 0.44 and a two-sided p-value of 0.88. Because of this, the claim also cannot be neglected. 
 
-To solidify our claim, we also plotted the accumulated run-lengths of the kinesin-1. To grant a better visibility of the result, the chosen bin size is much smaller. The plots can be seen in figure \ref{fig:diagrams}. It can also be seen, that the chosen exponential fit is very good, as it almost 
+To achieve an exacter value and lessen the error we now calculate the cumulative distribution function for the run-lengths and fit them. The formula for the fit is:
+\begin{align*}
+y = 1 - e^{-k(x - x0)}
+\end{align*}
+
+For this formula the mean value is calculated like this:
+\begin{align*}
+\bar{x} = \ln (2) \frac{1}{k}
+\end{align*}
+And it's error with the Gauss' uncertainty propagation:
+\begin{align*}
+\Delta x = |\ln (2) \frac{-1}{k^2} \Delta k|
+\end{align*}
+
+Thus, the following values are achieved:
+\begin{align*}
+\bar{l} _{25^\circ C} \ = \ (1.2 \ \pm \ 0.9) \, \mu m \\
+\bar{l} _{37^\circ C} \ = \ (1.4 \ \pm \ 0.9) \, \mu m
+\end{align*}
+
+To solidify our claim, we also plotted the accumulated run-lengths of the kinesin-1. To grant a better visibility of the result, the chosen bin size is much smaller. The plots can be seen in figure \ref{fig:diagrams}. It can also be seen, that the chosen cumulative distribution fit is very good, as it is almost an envelope to the accumulated run-lengths. 
 
 \section{Conclusion}
 
