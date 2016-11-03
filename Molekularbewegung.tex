@@ -40,7 +40,7 @@ separate-uncertainty, % Unsicherheiten seperat
 \usepackage{booktabs}  %schönere Tabellen
 \usepackage[toc]{multitoc}  %mehrspaltiges Inhaltsverzeichnis
 \usepackage{csquotes} % Anführungszeichen mit \enquote
-\usepackage{subfigure}  % Unterabbildungen a,b,c,…
+\usepackage{subcaption}  % Unterabbildungen a,b,c,…
 \usepackage{enumitem}  % Listen anpassen
 \setlist{itemsep=-10pt}
 \usepackage{scrpage2}  % Manipulation des Seitenstils
@@ -120,6 +120,13 @@ In this experiment, the kinesin-1 proteins are labeled with GFP to provide green
 To investigate the proteins fluorescence microscopy is used. The rhodamine and the GFP are excited by light: One of their electrons enters an excited orbital. This electron has the opposite spin of the remaining electron in the ground-state orbital. The molecules begin to vibrate and lose thermic energy in the process. After around 10\textsuperscript{-8} seconds the excited electron jumps back to the ground state and emits a photon. Because of the lost energy, the emitted photon has a larger wavelength then the absorbed one and can be distinguished from the laser light. Through this the tubules and proteins with the excited molecules can be observed.\\
 To limit the fluorescing volume and gain a clear picture, Total Internal Reflection Fluorescence Microscopy is used. The exciting laser lights are totally reflected before they enter the object. However, an evanescent wave enters the object. Thus, only the first few microtubules and kinesin-1 are illuminated.
 
+\begin{figure}[!ht] 
+  \centering
+     \includegraphics[width=0.7\textwidth]{kinesin_marking}
+  \caption{Marking of microtubules in FIESTA for analysis}
+  \label{fig:marking}
+\end{figure}
+
 \section{Experimental procedure}
 
 The movement of kinesin-1 has to be researched at two different temperatures: $25^\circ\text{C}$ and $37^\circ\text{C}$.
@@ -127,11 +134,16 @@ At first one prepares a flow-cell: two pieces of glass – one hydrophob, one hy
 
 To see the behaviour the samples are researched with a TIRF-microscope with a magnification of 100x and a camera pixel-size of 16\,$\mu m\textsuperscript{2}$. At first a photo of the microtubules is taken at normal light, to determine the position of the microtubules. After this a 1000-frames video is taken under green laser light, to see the movement of the kinesin-1. The data-analysis is done using the FIESTA-program which is contributed. Here the lines of the microtubules are marked as can be seen in figure \ref{fig:marking} and, after the computer marked tracks of moving particles on this lines, for each temperature 200-500 recognizable tracks of the kinesin-1 are marked. The program calculates the velocity and run-length of this marked tracks.
 
-\begin{figure}[!ht] 
-  \centering
-     \includegraphics[width=0.7\textwidth]{kinesin_marking}
-  \caption{Marking of microtubules in FIESTA for analysis}
-  \label{fig:marking}
+\begin{figure}[!hb]
+	\centering
+	\begin{subfigure}[b]{0.4\textwidth}
+	   \includegraphics[width=\textwidth]{Auswertungsbild_oben}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.4\textwidth}
+	   \includegraphics[width=\textwidth]{Auswertungsbild_unten}
+	\end{subfigure}
+  \caption{Marking of kinesin-1 in FIESTA}
+	\label{fig:kmarking}
 \end{figure}
 
 \section{Data and analysis}
