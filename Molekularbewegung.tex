@@ -32,6 +32,7 @@ separate-uncertainty, % Unsicherheiten seperat
 % Bilder einbinden
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{caption}
 %\graphicspath{{bilder/}} % TODO: Pfad unter dem die Bilder gesucht werden
 
 % Gestaltung
@@ -148,7 +149,15 @@ We acquired the following amount of movement incidents:
 \begin{figure}[htp] 
   \centering
      \includegraphics[width=1.0\textwidth]{all_diagrams.png}
-  \caption{top-left: Normalized velocity of kinesin-1 at $25^\circ$ C; top-right: Normalized velocity of kinesin-1 at $37^\circ$ C; mid-left: Normalized run-length of kinesin-1 at $25^\circ$ C; mid-right: Normalized run-length of kinesin-1 at $37^\circ$ C; bottom-left: Cumulative run-length of kinesin-1 at $25^\circ$ C; bottom-right: Cumulative run-length of kinesin-1 at $37^\circ$ C}
+  \caption{Chosen bin size: 0.3\,$\mu m/s$\\
+	top-left: Normalized velocity of kinesin-1 at $25^\circ$ C; \\
+	top-right: Normalized velocity of kinesin-1 at $37^\circ$ C; \\
+	chosen bin size: 0.3\,$\mu m$ \\
+	mid-left: Normalized run-length of kinesin-1 at $25^\circ$ C; \\
+	mid-right: Normalized run-length of kinesin-1 at $37^\circ$ C; \\
+	chosen bin size: 8\,$nm$ \\
+	bottom-left: Cumulative run-length of kinesin-1 at $25^\circ$ C;\\
+	bottom-right: Cumulative run-length of kinesin-1 at $37^\circ$ C}
   \label{fig:diagrams}
 \end{figure}
 
@@ -178,7 +187,7 @@ l _{37^\circ C} \ = \ (1.4 \ \pm \ 0.9) \, \mu m
 
 Again the claim is, that the true mean velocities differ for the same value than the measured mean velocities, in this case $l _{37^\circ C}$ is \(0.2\, \mu m\) bigger than $l _{25^\circ C}$. The Welch-test gives a two-sided t-value of 0.818. Because of this, the claim also cannot be neglected. 
 
-To achieve an exacter value and lessen the error the cumulative distribution function for the run-lengths is now calculated and fitted. To grant a better visibility of the result, the chosen bin size is much smaller. The plots can be seen in figure \ref{fig:diagrams}. The formula for the fit is:
+To achieve an exacter value and lessen the error the cumulative distribution function for the run-lengths is now calculated and fitted. To grant a better visibility of the result, the chosen bin size is much smaller. The plots can be seen in figure \ref{fig:diagrams}. It can be seen, that the fit describes the graphs very precise, which supports our claim, that we can achieve a higher accuracy using this method. The formula for the fit is:
 \begin{align*}
 y = 1 - e^{-k(x - x0)}
 \end{align*}
