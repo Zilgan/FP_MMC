@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.14)  2 NOV 2016 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.14)  2 NOV 2016 18:57
 entering extended mode
 **./Molekularbewegung.tex
 (Molekularbewegung.tex
@@ -2183,7 +2183,7 @@ Overfull \hbox (69.78465pt too wide) in paragraph at lines 89--89
  [][] 
  []
 
-<kinesin_graphic.png, id=43, 738.76pt x 590.205pt>
+<kinesin_graphic.png, id=47, 738.76pt x 590.205pt>
 File: kinesin_graphic.png Graphic file (type png)
  <use kinesin_graphic.png>
 Package pdftex.def Info: kinesin_graphic.png used on input line 92.
@@ -2198,45 +2198,62 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 98.
 \openout4 = `Molekularbewegung.toc'.
 
  [2] [3]
-<kinesin_marking.png, id=81, 3212.0pt x 3212.0pt>
+<kinesin_marking.png, id=86, 3212.0pt x 3212.0pt>
 File: kinesin_marking.png Graphic file (type png)
  <use kinesin_marking.png>
 Package pdftex.def Info: kinesin_marking.png used on input line 130.
 (pdftex.def)             Requested size: 292.7776pt x 292.74336pt.
  [4]
-<all_diagrams.png, id=89, 1549.4688pt x 1778.5647pt>
+<all_diagrams.png, id=94, 1549.4688pt x 1778.5647pt>
 File: all_diagrams.png Graphic file (type png)
  <use all_diagrams.png>
 Package pdftex.def Info: all_diagrams.png used on input line 148.
 (pdftex.def)             Requested size: 418.25555pt x 480.0832pt.
  [5 <./kinesin_marking.png (PNG copy)>]
 [6 <./all_diagrams.png>] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
+Overfull \hbox (0.34525pt too wide) in paragraph at lines 215--217
+\T1/lmr/m/n/10.95 (-20) This shows, that, while ve-loc-ity and run-length are ris-ing with tem-per-a-ture, the interacti
+on-
+ []
+
+[8]
+Overfull \hbox (11.5319pt too wide) in paragraph at lines 242--245
+[]\T1/lmr/m/n/10.95 (-20) http://ww1.prweb.com/prfiles/2009/09/08/140163/XVIVOHarvardKinesinMidView.jpg
+ []
+
+
+Overfull \hbox (128.98402pt too wide) in paragraph at lines 247--250
+[]\T1/lmr/m/n/10.95 (-20) https://en.wikipedia.org/wiki/Exponential_distribution#Examples_using_the_CDF_to_calculate_pro
+bability
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
  (Molekularbewegung.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 214.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 214.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
 Package rerunfilecheck Info: File `Molekularbewegung.out' has not changed.
-(rerunfilecheck)             Checksum: 2B9EBBDE49D5C24A8FD143DB21AD4E7D;559.
+(rerunfilecheck)             Checksum: 6D52457DB3F8DC7D71C2ACC713BFCC35;626.
  ) 
 Here is how much of TeX's memory you used:
- 21796 strings out of 493334
- 403857 string characters out of 3147000
- 581374 words of memory out of 3000000
- 24975 multiletter control sequences out of 15000+200000
- 83311 words of font info for 102 fonts, out of 3000000 for 9000
+ 21797 strings out of 493334
+ 403872 string characters out of 3147000
+ 581404 words of memory out of 3000000
+ 24977 multiletter control sequences out of 15000+200000
+ 83145 words of font info for 100 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,59p,10432b,797s stack positions out of 5000i,500n,10000p,200000b,50000s
-{P:/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{P:/MiKTeX/fonts/enc/dvips/lm/
-lm-rm.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<P:/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/pub
-lic/lm/lmmi10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr10.pfb><P:/MiKTeX/fonts
-/type1/public/lm/lmr12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmro10.pfb><P:/MiK
-TeX/fonts/type1/public/lm/lmssbx10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy
-6.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Molekularbewegung.pdf (8 pages, 2146799 bytes).
+{P:/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{P:/MiKTeX/fonts/enc/dvips/lm/
+lm-mathit.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{P:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<P:/MiKTeX/fonts/type1/pub
+lic/lm/lmbx12.pfb><P:/MiKTeX/fonts/type1/public/lm/lmex10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><P:/MiKTeX/fon
+ts/type1/public/lm/lmmi8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmr12.pfb><P:/M
+iKTeX/fonts/type1/public/lm/lmr8.pfb><P:/MiKTeX/fonts/type1/public/lm/lmro10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmssbx
+10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><P:/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><P:/MiKTeX/fonts/type1/pub
+lic/lm/lmsy8.pfb>
+Output written on Molekularbewegung.pdf (9 pages, 2328393 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 26208 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 26216 words of extra memory for PDF output out of 29859 (max. 10000000)
 
